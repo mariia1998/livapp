@@ -1,0 +1,182 @@
+
+$orange : #ff6e40;
+$main-margin: 5%;
+$margin-top: 10%;
+$icone-size: 15px;
+$font-size: 16px;
+$padding:0%;
+$font-family: sans-serif;
+
+#welcome{
+  margin-top: 450px;
+  margin-left: $main-margin;
+  margin-right: $main-margin;
+}
+
+%span{
+  background-color: white;
+  font-size: 16px;
+
+  padding: 15px;
+  margin-left: $main-margin ;
+  margin-right: $main-margin ;
+  text-align: center;
+  color: $orange;
+}
+%rounded-border{
+  border: 2px solid $orange;
+  border-radius: 15px;
+}
+
+.login {
+  @extend %span;
+  margin-top: 195px;
+}
+
+.register {
+  @extend %span;
+  margin-top: 20px;
+}
+
+i{
+  font-size: $icone-size;
+}
+
+.infos{
+  @extend %rounded-border;
+
+}
+
+.btn{
+  @extend %rounded-border;
+  background: $orange;
+  color: white;
+
+}
+
+.FG{
+  display: inline-block;
+  background: white;
+  color: $orange;
+}
+
+//navbar
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: $padding;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 10vh;
+  background:$orange;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 0%;
+}
+
+.nav-links li a {
+  font-size: $font-size;
+  color: white;
+  text-decoration: none;
+  left:  0%;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: $main-margin;
+  }
+  nav {
+    position: relative;
+  }
+
+  .lines {
+    position: absolute;
+    cursor: pointer;
+    left: $main-margin;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background:$orange;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 10% -10%);
+    -webkit-clip-path: circle(100px at 10% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 10% -10%);
+    -webkit-clip-path: circle(1000px at 10% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+//choix
+.section-header {
+  font-family: "Metal Mania";
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
+}
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: $font-size;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}

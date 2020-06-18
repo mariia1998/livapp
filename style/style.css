@@ -1,0 +1,173 @@
+#welcome {
+  margin-top: 450px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.login, .register {
+  background-color: white;
+  font-size: 16px;
+  padding: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  color: #ff6e40;
+}
+
+.infos, .btn {
+  border: 2px solid #ff6e40;
+  border-radius: 15px;
+}
+
+.login {
+  margin-top: 195px;
+}
+
+.register {
+  margin-top: 20px;
+}
+
+i {
+  font-size: 15px;
+}
+
+.btn {
+  background: #ff6e40;
+  color: white;
+}
+
+.FG {
+  display: inline-block;
+  background: white;
+  color: #ff6e40;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  height: 10vh;
+  background: #ff6e40;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0%;
+}
+
+.nav-links li a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  left: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5%;
+  }
+  nav {
+    position: relative;
+  }
+  .lines {
+    position: absolute;
+    cursor: pointer;
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    background: #ff6e40;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    clip-path: circle(100px at 10% -10%);
+    -webkit-clip-path: circle(100px at 10% -10%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 10% -10%);
+    -webkit-clip-path: circle(1000px at 10% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    -webkit-transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    -webkit-transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+.section-header {
+  font-family: "Metal Mania";
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=style.css.map */
